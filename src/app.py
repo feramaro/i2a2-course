@@ -13,8 +13,8 @@ llm = ChatOpenAI(
     temperature=0
 )
 
-df_header = pd.read_csv("202401_NFs_Cabecalho.csv")
-df_itens = pd.read_csv("202401_NFs_Itens.csv")
+df_header = pd.read_csv("../docs/202401_NFs_Cabecalho.csv")
+df_itens = pd.read_csv("../docs/202401_NFs_Itens.csv")
 
 df_completo = pd.merge(df_itens, df_header, on="CHAVE DE ACESSO", how="left")
 
